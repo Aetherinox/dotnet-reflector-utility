@@ -1,0 +1,37 @@
+# Ignore everything
+/*
+
+# Add Gitignore
+!.gitignore
+
+# Bin
+!/bin
+/bin/Debug/*
+/bin/Release/*.pdb
+/bin/Release/*.manifest
+/bin/Release/*.application
+/bin/Release/app.publish/*
+
+# Allow: Classes
+!/Classes*
+
+# Allow: Controls
+!/Controls*
+
+# Allow: Forms
+!/Forms*
+
+# Allow: Materials
+!/Materials*
+
+# Allow: Properties
+!/Properties*
+
+# Allow: Exts
+!*.csproj
+!*.config
+!*.sln
+!*.cs
+!*.resx
+!*.ico
+!*.md
