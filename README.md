@@ -8,11 +8,11 @@ Developed under the following conditions:
 - v4.8.0 .NET Framework
 
 # Usage
-Download the project repo and open with Visual Studio. 
+Download the project repo and open with Visual Studio.
 Executable in `/bin/` folder.
 If building your own version, you must ensure the following three files are in the same directory with each other:
-- /bin/`Reflector Keygen.exe`
-- /bin/`Reflector Keygen.exe.config`
+- /bin/`ReflectorKG.exe`
+- /bin/`ReflectorKG.exe.config`
 - /bin/`readme.md`
 
 # App.config
