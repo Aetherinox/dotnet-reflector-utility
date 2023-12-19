@@ -505,7 +505,6 @@ namespace ReflectorKG
 
         private void txt_Users_TextChanged(object sender, EventArgs e)
         {
-
             int i_min_users = Int32.Parse(ConfigurationManager.AppSettings["users_min_default"]);
             int i_max_users = Int32.Parse(ConfigurationManager.AppSettings["users_max_default"]);
 
@@ -515,12 +514,16 @@ namespace ReflectorKG
                 MessageBox.Show("Numbers are 1, 2, 3, - " + i_max_users.ToString( ), "Not a valid number", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsers.Text = i_min_users.ToString();
             }
+
             else
             {
-                if (Convert.ToInt32(txtUsers.Text) > i_max_users || Convert.ToInt32(txtUsers.Text) < i_min_users)
+                if(!string.IsNullOrEmpty(txtUsers.Text.ToString()))
                 {
-                    MessageBox.Show("Must be between " + i_min_users + " and " + i_max_users, "Invalid Range", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtUsers.Text = i_min_users.ToString();
+                    if (Convert.ToInt32(txtUsers.Text) > i_max_users || Convert.ToInt32(txtUsers.Text) < i_min_users)
+                    {
+                        MessageBox.Show("Must be between " + i_min_users + " and " + i_max_users, "Invalid Range", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUsers.Text = i_min_users.ToString();
+                    }
                 }
             }
         }
